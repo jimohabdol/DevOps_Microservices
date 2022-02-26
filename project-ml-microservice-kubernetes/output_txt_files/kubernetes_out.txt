@@ -1,1 +1,18 @@
 <paste log output from Kubernetes-mediated prediction, here>
+(.devops) busayo.akanni@busayos-mbp project-ml-microservice-kubernetes % ./run_kubernetes.sh
+Error from server (AlreadyExists): pods "prediction-api" already exists
+NAME             READY   STATUS    RESTARTS      AGE
+prediction-api   1/1     Running   1 (31s ago)   17m
+Forwarding from 127.0.0.1:8000 -> 80
+Forwarding from [::1]:8000 -> 80
+Handling connection for 8000
+
+# Prediction from another terminal
+busayo.akanni@busayos-mbp project-ml-microservice-kubernetes % ./make_prediction.sh
+Port: 8000
+{
+  "prediction": [
+    20.35373177134412
+  ]
+}
+busayo.akanni@busayos-mbp project-ml-microservice-kubernetes % 
